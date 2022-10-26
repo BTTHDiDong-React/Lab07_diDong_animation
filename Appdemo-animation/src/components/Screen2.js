@@ -30,7 +30,7 @@ const Screen2 = ({navigation}) => {
     }
     
     useEffect(() => {
-        Animated.timing(fadeX, {toValue: x , duration: 1000, useNativeDriver: false}).start();
+        Animated.timing(fadeX, {toValue: x , duration: 500, useNativeDriver: false}).start();
     }, [x])
     //
     const setFadeYAdd = () => {
@@ -50,7 +50,7 @@ const Screen2 = ({navigation}) => {
        
     }
     useEffect(() => {
-        Animated.timing(fadeY, {toValue: y , duration: 1000, useNativeDriver: false}).start();
+        Animated.timing(fadeY, {toValue: y , duration: 500, useNativeDriver: false}).start();
 
         // console.log('fadeY',y);
     }, [y])
@@ -78,6 +78,9 @@ const Screen2 = ({navigation}) => {
                     fontWeight: 'bold',
                     color: '#f00',
                 }]} >Hello</Animated.Text>
+            </View>
+            <View   style={[{ } , styles.viewCenter ]}   >
+                <Text  style={[{ fontWeight: 'bold', marginTop: 15, fontSize: 16, }  ]}   >Click để di chuyển.</Text>
             </View>
             <View style={[{
                 justifyContent: 'space-between',
