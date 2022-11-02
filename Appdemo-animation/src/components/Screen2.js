@@ -34,7 +34,8 @@ const Screen2 = ({navigation}) => {
     }, [x])
     //
     const setFadeYAdd = () => {
-        if (y>=520) {
+        if (y>=480) {
+            sety(500);
             return;
         }
         let a = y + 40;
@@ -42,7 +43,8 @@ const Screen2 = ({navigation}) => {
        
     }
     const setFadeYminus = () => {
-        if (y <= 0) {
+        if (y <= 40) {
+            sety(0);
             return;
         }
         let a = y - 40;
@@ -51,8 +53,6 @@ const Screen2 = ({navigation}) => {
     }
     useEffect(() => {
         Animated.timing(fadeY, {toValue: y , duration: 500, useNativeDriver: false}).start();
-
-        // console.log('fadeY',y);
     }, [y])
 
 
